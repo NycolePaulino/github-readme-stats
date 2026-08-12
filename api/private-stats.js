@@ -21,7 +21,7 @@ async function githubRequest(url) {
 
   return response;
 }
- function getAuthenticatedUser() {
+ async function getAuthenticatedUser() {
   const response = await githubRequest(`${GITHUB_API}/user`);
 
   return response.json();
